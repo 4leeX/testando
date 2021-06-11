@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import produtos from '../../produtos';
-import '../../produtos';
-import './styled.css';
+import Container from './styled'
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import PaymentIcon from '@material-ui/icons/Payment';
+import '../../produtos';
+import './styled.js';
 
 export default function Card() {
   const [scrollX, setScrollX] = useState(-200);
@@ -30,6 +31,7 @@ export default function Card() {
   };
 
   return (
+    <Container>
     <div className="movieRow">
       <div className="movieRow-left" onClick={handleLeft}>
         <NavigateBeforeIcon style={{ fontSize: 50 }} />
@@ -59,13 +61,12 @@ export default function Card() {
                   <button>VER PRODUTO</button>
                   <div className="bag"><LocalMallIcon style={{ fontSize: 20 }}/> ADICIONAR NA SACOLA</div>
                 </div>
-               
-                
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
+    </Container>
   );
 }

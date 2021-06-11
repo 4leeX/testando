@@ -1,3 +1,7 @@
+import styled from 'styled-components'
+
+const Container = styled.section`
+
 .movieRow {
   margin-bottom: 30px;
 }
@@ -9,19 +13,26 @@
 .movieRow-list {
   transition: all ease 0.5s;
 }
-.movieRow-item, .hov {
+.movieRow-item {
   display: inline-block;
   transform: scale(0.9);
   width: 180px;
-  cursor: pointer;
-}
+  cursor: pointer;  
 
+  .hov{
+    opacity: 0;
+  }
+}
 
 .movieRow-item:hover{
   transform: scale(1);
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all ease 0.2s;
+
+  .hov{
+    opacity: 1;
+  }
 }
 
 .movieRow-item img {
@@ -71,6 +82,7 @@
   color: grey;
   font-weight: initial;
   font-size: 17px;
+  text-align: center;
 }
  span {
   font-size: 13px;
@@ -103,10 +115,6 @@ button{
   font-size: 13px;
 }
 
-.hov {
-  opacity: 0;
-}
-.hov:hover {
-  opacity: 1;
-} 
+`;
 
+export default Container;
